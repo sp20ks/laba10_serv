@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'serv#result'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'serv/index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  post 'serv/result', to: 'serv#result'
+  get 'serv/result'
+
+  root 'serv#index'
 end
