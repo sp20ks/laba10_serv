@@ -10,10 +10,10 @@ class ServController < ApplicationController
   def index; end
 
   def result
-    @xml_res = { before_processing: @arr, length: @length, after: @res_arr, largest_segment: @max_subarr }
+    @res = { before_processing: @arr, length: @length, after: @res_arr, largest_segment: @max_subarr }
     respond_to do |format|
       format.html
-      format.xml { render xml: @xml_res }
+      format.xml { render xml: @res }
     end
   end
 end

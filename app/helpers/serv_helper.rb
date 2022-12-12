@@ -33,7 +33,7 @@ module ServHelper
       end
     end
     @res_arr << buf unless buf.length.zero?
-    p @res_arr
+    @res_arr
   end
 
   def largest_segment
