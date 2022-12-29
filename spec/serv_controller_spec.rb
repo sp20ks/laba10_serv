@@ -34,5 +34,3 @@ RSpec.describe ServController, type: :controller do
     expect(response.content_type).to eq('text/html; charset=utf-8')
   end
 end
-
-

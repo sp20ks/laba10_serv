@@ -37,11 +37,11 @@ module ServHelper
   end
 
   def largest_segment
-    unless @res_arr.length.zero?
-      @max_subarr = @res_arr[0]
-      @res_arr.each do |elem|
-        @max_subarr = elem if @max_subarr.length < elem.length
-      end
+    return if @res_arr.length.zero?
+
+    @max_subarr = @res_arr[0]
+    @res_arr.each do |elem|
+      @max_subarr = elem if @max_subarr.length < elem.length
     end
   end
 end
